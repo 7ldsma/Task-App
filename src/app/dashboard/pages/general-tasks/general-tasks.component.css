@@ -1,21 +1,28 @@
 
 .task-form{
-    position: fixed;
+    position: sticky;
     bottom: 50px;
     
 }
-    
+
+.task-list{
+    margin-bottom: 100px;
+}
+
+
 @media screen and (min-width: 768px) {
-
+    
     .task-form{
-    position: relative;
-    left: 200px;
-    top: 10px;
-}   
-
+        position: relative;
+        left: 200px;
+        top: 10px;
+        }   
+        
     .task-list{
         position: relative;
         left: 200px;
+        max-width: 500px;
     }
+
 
 }

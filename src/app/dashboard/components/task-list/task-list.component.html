@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Task List</h1>
-    <ul class="list-group">
+    <ul class="list-group shadow-sm">
 
         @for (task of tasks; track $index) {
 
@@ -50,15 +50,17 @@
             <p>{{ task.description }}</p>
             <div class="d-flex my-3">
                 
-                <div class="bg-success-subtle px-4 py-2 rounded-2 mx-1" 
+                <button class="bg-success-subtle px-4 py-2 rounded-2 border-0 shadow-sm mx-1" 
                     [ngClass]="{'bg-success-subtle': task.completed, 'bg-warning-subtle': !task.completed}"
-                    (click)="toggleCompletion(task)">{{ task.completed ? 'Completed' : 'Ongoing' }}</div>
-                <div class="bg-secondary-subtle px-4 py-2 rounded-2 mx-1" (click)="editTask( task )">
+                    (click)="toggleCompletion(task)">{{ task.completed ? 'Completed' : 'Ongoing' }}</button>
+                <button class="bg-secondary-subtle px-4 py-2 rounded-2 mx-1 border-0 shadow-sm" 
+                        (click)="editTask( task )">
                     <img src="../../../../assets/edit icon.svg" alt="">
-                </div>
-                <div class="bg-secondary-subtle px-4 py-2 rounded-2 mx-1" (click)="deleteTask(task.id)">
+                </button>
+                <button class="bg-secondary-subtle px-4 py-2 border-0 rounded-2 shadow-sm mx-1" 
+                        (click)="deleteTask(task.id)">
                     <img src="../../../../assets/trash icon.svg" alt="">
-                </div>
+                </button>
             </div>
             
             }

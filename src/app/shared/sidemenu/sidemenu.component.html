@@ -6,25 +6,25 @@
     <div id="profile" class="px-4 py-4">
         <p class="text-muted">Welcome back,</p>
         <a href="#" class="d-inline-flex align-items-center">
-            <img class="rounded-circle me-2" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=128&q=80" alt="" width="32" height="32">
-            <span class="font-weight-bold">Joan</span>
+            <img class="rounded-circle me-2" src="../../../assets/Alvaro Pic.webp" alt="" width="52" height="52">
+            <span class="fw-bold">Alvaro</span>
         </a>
     </div>
     <div id="nav" class="px-4">
         @for (item of menuItems; track $index) {
-            <a [routerLink]="item.path" routerLinkActive="active" href="#" class="d-block py-2 text-decoration-none">
+            <a [routerLink]="item.path" routerLinkActive="bg-primary text-white rounded-2" href="#" class="d-block py-2 text-decoration-none">
                 <div class="d-inline-flex align-items-center">
                     <div>
                         <!-- Puedes agregar aquí un icono si lo deseas -->
                     </div>
                     <div class="d-flex flex-column">
-                        <span class="h6 font-weight-bold">{{ item.title }}</span>
+                        <span class="h6 ps-3 fw-bold">{{ item.title }}</span>
                     </div>
                 </div>
             </a>
         }
     </div>
 </div>
-<div id="mobile-menu" class="bottom-menu bg-primary w-100 fixed-bottom d-lg-none">
+<div id="mobile-menu" class="bottom-menu bg-primary-subtle w-100 d-md-none fixed-bottom d-flex justify-content-center align-items-center">
     <img src="../../../assets/calendar event.svg" alt="">
 </div>

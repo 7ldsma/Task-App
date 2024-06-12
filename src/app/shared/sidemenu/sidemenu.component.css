@@ -6,29 +6,36 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 250px; /* Ancho del menú lateral en pantallas grandes */
-    overflow-y: auto; /* Permitir desplazamiento vertical si el contenido excede el tamaño del menú */
-    transition: transform 0.3s ease; /* Agregar transición suave al mostrar/ocultar el menú en dispositivos móviles */
+    width: 250px; 
+    overflow-y: auto; 
+    transition: transform 0.3s ease; 
   }
   
   .sidemenu.collapsed {
     transform: translateY(100%); /* Ocultar el menú en dispositivos móviles */
   }
+
+  .bottom-menu{
+    display: none;
+  }
+
+
   
   @media screen and (max-width: 768px) {
     .sidemenu {
-      width: 100%; /* Ancho del menú al 100% en dispositivos móviles */
+      width: 100%; 
       height: auto;
-      transform: translateY(100%); /* Ocultar el menú por defecto en dispositivos móviles */
-      z-index: 1000; /* Asegurar que el menú esté sobre otros elementos */
+      transform: translateY(100%); 
+      z-index: 1000; 
     }
   
     .sidemenu.collapsed {
-      transform: translateY(0); /* Mostrar el menú en dispositivos móviles cuando se abre */
+      transform: translateY(0); 
     }
 
     .bottom-menu {
-        display: block; /* Mostrar el menú inferior en dispositivos móviles */
-        z-index: 1000; /* Asegurar que el menú esté sobre otros elementos */
+        height: 80px;
+        display: block; 
+        z-index: 1000; 
       }
   }
