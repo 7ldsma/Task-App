@@ -1,4 +1,4 @@
-# Taskio: Task management App
+# Task1o: Task management App
 
 Through this Angular 17 application, users can add, edit, and delete tasks.
 [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
