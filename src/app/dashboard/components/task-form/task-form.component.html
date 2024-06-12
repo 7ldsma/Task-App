@@ -1,0 +1,50 @@
+<form [formGroup]="myTask" (ngSubmit)="onSubmit()" autocomplete="off" class="shadow-sm p-3 my-5 bg-body-tertiary rounded">
+
+    <!-- Nombre -->
+    <div class="mb-3 row">
+        <!-- <label class="col-sm-3 col-form-label">Title</label> -->
+         <h3 class="my-3">Add your tasks</h3>
+        <div class="col">
+            <input type="text"
+                   class="form-control"
+                   formControlName="title"
+                   placeholder="Task Title">
+            @if (isValidField('title')) {
+                <span class="form-text text-warning">
+                       {{ getFieldError('title') }}
+                </span>
+                
+            }
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <!-- <label class="col-sm-3 col-form-label">Description</label> -->
+        <div class="col">
+            <input type="text"
+                   class="form-control" 
+                   formControlName="description"
+                   placeholder="Task Description">
+            @if (isValidField('description')) {
+                <span class="form-text text-warning">
+                    {{ getFieldError('description') }}
+                </span>
+                    
+            }
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <button type="submit"
+                    class="btn btn-primary px-4 float-end"
+                    [disabled]="myTask.invalid"
+                    >
+                    Save
+            </button>
+        </div>
+    </div>
+
+
+</form>
